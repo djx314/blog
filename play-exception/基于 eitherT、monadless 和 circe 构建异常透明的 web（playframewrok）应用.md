@@ -205,7 +205,7 @@ def retrieve(orderKey: String) = Action.async { implicit request =>
 
 ```scala
 def validate(orderKey: String): V.ResultT[Boolean] = {
-  if (orderKey.size == 18) {
+  if (orderKey.size == 12) {
     V.rightT(true)
   } else {
     V.leftT[Boolean](ErrorResult(msg = "单号格式错误", code = Status.BAD_REQUEST))
