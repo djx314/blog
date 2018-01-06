@@ -193,7 +193,7 @@ def retrieve(orderKey: String) = Action.async { implicit request =>
 ```
 
 可以看到，只需要一个`R.toJsonResult`，即可把`V.ResultT`转化成需要的 json 结果，由于状态码已经保存在`code`字段
-里面了（上文观点：最终状态由业务逻辑决定），所以无需在 Controller 决定返回的状态了。
+里面了（上文观点：响应状态由业务逻辑决定），所以无需在 Controller 决定响应的状态了。
 
 做好之后，前端无论发送什么请求，都可以得到一个标准的 json 响应，只需要在 ajax success 的时候展示数据（`data`字段）
 和在 failed 的时候展示错误信息（`msg`字段）就可以了。
