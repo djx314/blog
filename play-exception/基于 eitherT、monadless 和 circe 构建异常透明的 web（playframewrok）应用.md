@@ -238,7 +238,7 @@ etLess.unlift(validate(orderKey)): Boolean
 ```
 
 因为这段代码是上下文无关的，所以如果你忘了加`etLess.unlift`则会使这段验证逻辑失去作用，为了做好类型检查，即使这个
-Boolean 的值是多余的应该明确的写出来。
+Boolean 的值是多余的也应该明确的写出来。
 
 ## 5、总结
 
