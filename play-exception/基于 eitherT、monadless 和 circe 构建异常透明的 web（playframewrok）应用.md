@@ -137,7 +137,6 @@ trait ArcherHelper {
       futureLess.lift {
         val tableData = futureLess.unlift(toJson(value))
         val resultF = value.fold({ errorResult =>
-          //val tableData = TableData.msg(errorResult.msg, errorResult.code)
           new Results.Status(errorResult.code).apply(tableData)
         }, { data =>
           new Results.Status(data.code).apply(tableData)
